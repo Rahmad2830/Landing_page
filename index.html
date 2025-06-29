@@ -43,6 +43,19 @@
     .link:hover {
       text-decoration: underline;
     }
+    @media (max-width: 768px) {
+      .gambar {
+        display: none;
+      }
+      .header {
+        padding-block: 50px;
+        height: 100vh;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -70,14 +83,14 @@
   <!-- hero -->
   <section id="home" class="bg-dark pt-5 text-white">
     <div class="container">
-      <div class="row">
+      <div class="row header">
         <div class="col-12 col-md-8 align-self-center">
         <h1 class="display-2 fw-bold">Building Dreams,<br><span class="text-warning">Into Reality</span></h1>
         <p class="lead">Membangun mimpi anda dengan pasti!</p>
         <a href="#contact" class="btn btn-warning btn-lg">Get Started</a>
         </div>
         <div class="col-12 col-md-4">
-          <img src="img/worker.png" alt="Construction worker" class="img-fluid" loading="lazy">
+          <img src="img/worker.png" alt="Construction worker" class="img-fluid gambar" loading="lazy">
         </div>
       </div>
     </div>
