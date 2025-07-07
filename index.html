@@ -11,65 +11,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      font-family: "Work Sans", Sans-Serif;
-    }
-    .hero {
-      height: 640px;
-    }
-    .tombol {
-      background: none;
-      border: none;
-    }
-    .light:hover {
-      background-color: #ffc108;
-    }
-    .herobawah {
-      background-image: url('img/herobawah.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 640px;
-    }
-    .text-shadow {
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    }
-    .link {
-      text-decoration: none;
-      color: white;
-      padding-block: 2px;
-    }
-    .link:hover {
-      text-decoration: underline;
-    }
-    .btn {
-      border-radius: 50px;
-    }
-    @media (max-width: 768px) {
-      .gambar {
-        display: none;
-      }
-      .header {
-        padding-block: 50px;
-        height: 100vh;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        text-align: center;
-      }
-    }
-    @media (max-width: 992px) {
-      .header h1 {
-        font-size: 40px;
-      }
-      .header p {
-        font-size: 18px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
   <!-- navbar -->
@@ -97,12 +41,12 @@
   <section id="home" class="bg-dark pt-5 text-white">
     <div class="container">
       <div class="row header">
-        <div class="col-12 col-md-8 align-self-center">
+        <div data-aos="fade-right" class="col-12 col-md-8 align-self-center">
         <h1 class="display-2 fw-bold">Building Dreams,<br><span class="text-warning">Into Reality</span></h1>
         <p class="lead">Membangun mimpi anda dengan pasti!</p>
         <a href="#contact" class="btn btn-warning btn-lg">Get Started</a>
         </div>
-        <div class="col-12 col-md-4">
+        <div data-aos="fade-left" class="col-12 col-md-4">
           <img src="img/worker.png" alt="Construction worker" class="img-fluid gambar" loading="lazy">
         </div>
       </div>
@@ -112,12 +56,12 @@
 <!-- showcase -->
 <div id="layanan" class="py-5">
   <div class="container">
-    <div class="d-flex flex-column py-5">
+    <div data-aos="zoom-in" class="d-flex flex-column py-5">
       <h6 class="fw-normal">Layanan Kami</h6>
       <h1 class="display-2 fw-bold">Layanan yang Komprehensif</h1>
     </div>
     <div class="row g-4">
-      <div class="col-12 col-md-4">
+      <div data-aos="fade-right" class="col-12 col-md-4">
         <div class="border border-black p-3">
           <i class="bi bi-house-add display-1"></i>
           <h3 class="fw-bold">Bangunan Baru</h3>
@@ -128,7 +72,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4">
+      <div data-aos="zoom-in" class="col-12 col-md-4">
         <div class="border bg-dark text-white border-black p-3">
           <i class="bi bi-bar-chart display-1"></i>
           <h3 class="fw-bold">Bangunan Komersial</h3>
@@ -139,7 +83,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-4">
+      <div data-aos="fade-left" class="col-12 col-md-4">
         <div class="bg-warning p-3"><i class="bi bi-box display-1"></i>
           <h3 class="fw-bold">Renovasi & Remodelling</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -155,16 +99,16 @@
 <!-- About -->
 <div id="about" class="py-5">
   <div class="container">
-    <div class="d-flex flex-column">
+    <div data-aos="flip-left" class="d-flex flex-column">
       <h6 class="fw-normal">Tentang Kami</h6>
       <h1 class="display-2 fw-bold">Infrastruktur Pembangunan Berkelanjutan dan Inovatif</h1>
     </div>
     <div class="d-flex flex-column mt-5">
       <img src="img/about.jpg" alt="bulldozer dalam kontstruksi CAF" class="img-fluid" loading="lazy">
-      <p class="fw-light mt-3 text-justify">Di CAF, kami percaya bahwa setiap proyek konstruksi bukan sekadar membangun struktur fisik, tetapi juga membangun hubungan yang kuat, kepercayaan yang tak tergoyahkan, dan warisan untuk masa depan. Kami tidak hanya sekadar mendirikan gedung kami mewujudkan visi Anda menjadi kenyataan dengan integritas, keahlian, dan komitmen yang tak tertandingi.</p>
-      <p class="fw-light text-justify">Dengan pengalaman bertahun-tahun di dunia konstruksi, CAF telah menjadi sinonim dengan kualitas dan keandalan. Keahlian kami mencakup spektrum luas proyek, mulai dari hunian yang nyaman, gedung komersial yang dinamis, hingga infrastruktur yang kompleks. Setiap batu bata yang kami pasang, setiap fondasi yang kami tuang, dan setiap detail yang kami kerjakan adalah cerminan dari dedikasi kami untuk mencapai standar tertinggi. </p>
+      <p data-aos="fade-up-left" class="fw-light mt-3 text-justify">Di CAF, kami percaya bahwa setiap proyek konstruksi bukan sekadar membangun struktur fisik, tetapi juga membangun hubungan yang kuat, kepercayaan yang tak tergoyahkan, dan warisan untuk masa depan. Kami tidak hanya sekadar mendirikan gedung kami mewujudkan visi Anda menjadi kenyataan dengan integritas, keahlian, dan komitmen yang tak tertandingi.</p>
+      <p data-aos="fade-up-right" class="fw-light text-justify">Dengan pengalaman bertahun-tahun di dunia konstruksi, CAF telah menjadi sinonim dengan kualitas dan keandalan. Keahlian kami mencakup spektrum luas proyek, mulai dari hunian yang nyaman, gedung komersial yang dinamis, hingga infrastruktur yang kompleks. Setiap batu bata yang kami pasang, setiap fondasi yang kami tuang, dan setiap detail yang kami kerjakan adalah cerminan dari dedikasi kami untuk mencapai standar tertinggi. </p>
     </div>
-    <div class="row gy-4 text-center">
+    <div data-aos="fade-right" class="row gy-4 text-center">
       <div class="col-12 col-md-3">
         <h1 class="display-2 fw-bold">400+</h1>
         <p class="lead">Proyek Sukses</p>
@@ -186,51 +130,87 @@
 </div>
 
 <!-- Latest Project -->
-<div id="project" class="py-5 bg-dark text-white">
+<div x-data="lightbox()" id="project" class="py-5 bg-dark text-white">
   <div class="container">
-    <div class="d-flex flex-column">
+    <div data-aos="fade-left" class="d-flex flex-column">
       <h6 class="fw-normal">Proyek Kami</h6>
       <h1 class="display-2 fw-bold">Proyek Terbaru Kami</h1>
     </div>
     <div class="row mt-5 g-4">
-      <div class="col-12 col-md-4 text-center">
-        <img src="img/project.jpeg" alt="Atlas Museum" loading="lazy" class="img-fluid">
+      <div data-aos="fade-right" class="col-12 col-md-4 text-center">
+        <div class="project-card position-relative overflow-hidden" @click="open('img/project.jpeg')">
+          <img src="img/project.jpeg" alt="Atlas Museum" class="img-fluid project" loading="lazy">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <span class="text-white fw-bold fs-3">See</span>
+          </div>
+        </div>
         <h3 class="fw-bold mt-3">Atlas Museum</h3>
         <p class="fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <div class="col-12 col-md-4 text-center">
-        <img src="img/project1.jpeg" alt="Kenanga Office" loading="lazy" class="img-fluid">
+      <div data-aos="zoom-in" class="col-12 col-md-4 text-center">
+        <div class="project-card position-relative overflow-hidden" @click="open('img/project1.jpeg')">
+          <img src="img/project1.jpeg" alt="Atlas Museum" class="img-fluid project" loading="lazy">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <span class="text-white fw-bold fs-3">See</span>
+          </div>
+        </div>
         <h3 class="fw-bold mt-3">Kenanga Office</h3>
         <p class="fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <div class="col-12 col-md-4 text-center">
-        <img src="img/project2.jpeg" alt="Rubik Building" loading="lazy" class="img-fluid">
+      <div data-aos="fade-left" class="col-12 col-md-4 text-center">
+        <div class="project-card position-relative overflow-hidden" @click="open('img/project2.jpeg')">
+          <img src="img/project2.jpeg" alt="Atlas Museum" class="img-fluid project" loading="lazy">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <span class="text-white fw-bold fs-3">See</span>
+          </div>
+        </div>
         <h3 class="fw-bold mt-3">Rubik Building</h3>
         <p class="fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <div class="col-12 col-md-4 text-center">
-        <img src="img/project3.jpeg" alt="Glass Hotel" loading="lazy" class="img-fluid">
+      <div data-aos="fade-right" class="col-12 col-md-4 text-center">
+        <div class="project-card position-relative overflow-hidden" @click="open('img/project3.jpeg')">
+          <img src="img/project3.jpeg" alt="Atlas Museum" class="img-fluid project" loading="lazy">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <span class="text-white fw-bold fs-3">See</span>
+          </div>
+        </div>
         <h3 class="fw-bold mt-3">Glass Hotel</h3>
         <p class="fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <div class="col-12 col-md-4 text-center">
-        <img src="img/project4.jpeg" alt="Al Ahli Mosque" loading="lazy" class="img-fluid">
+      <div data-aos="zoom-in" class="col-12 col-md-4 text-center">
+        <div class="project-card position-relative overflow-hidden" @click="open('img/project4.jpeg')">
+          <img src="img/project4.jpeg" alt="Atlas Museum" class="img-fluid project" loading="lazy">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <span class="text-white fw-bold fs-3">See</span>
+          </div>
+        </div>
         <h3 class="fw-bold mt-3">Al Ahli Mosque</h3>
         <p class="fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <div class="col-12 col-md-4 text-center">
-        <img src="img/project5.jpeg" alt="Axel Towers" loading="lazy" class="img-fluid">
+      <div data-aos="fade-left" class="col-12 col-md-4 text-center">
+        <div class="project-card position-relative overflow-hidden" @click="open('img/project5.jpeg')">
+          <img src="img/project5.jpeg" alt="Atlas Museum" class="img-fluid project" loading="lazy">
+          <div class="overlay d-flex justify-content-center align-items-center">
+            <span class="text-white fw-bold fs-3">See</span>
+          </div>
+        </div>
         <h3 class="fw-bold mt-3">Axel Towers</h3>
         <p class="fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </div>
+    <template x-if="isOpen">
+    <div class="w-100 h-100 top-0 start-0 position-fixed overlay d-flex justify-content-center align-items-center" style="z-index: 1050" @click.self="close()">
+      <img :src='imageSrc' alt="lightbox" class="img-fluid" style="max-height: 90vh; max-width: 100%; object-fit: contain">
+    </div>
+    </template>
   </div>
 </div>
+
 
 <!-- testimonial -->
 <div class="py-5">
   <div class="container">
-    <div class="d-flex flex-column">
+    <div data-aos="flip-right" class="d-flex flex-column">
       <h6 class="fw-normal">Testimonial</h6>
       <h1 class="display-2 fw-bold">Apa yang Klien Kami Katakan</h1>
     </div>
@@ -246,10 +226,10 @@
           }
         }).mount()
     ">
-      <div class="col-12 col-md-4 mt-5">
+      <div data-aos="fade-up" class="col-12 col-md-4 mt-5">
         <img src="img/testimoni.jpeg" alt="testiomni" loading="lazy" class="img-fluid">
       </div>
-      <div class="col-13 col-md-8 align-self-center mt-5">
+      <div data-aos="fade-down" class="col-13 col-md-8 align-self-center mt-5">
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
@@ -274,7 +254,7 @@
 </div>
 
 <!-- hero bawah -->
-<div id="contact" class="py-5">
+<div data-aos="fade-up" id="contact" class="py-5">
   <div class="container">
     <div class="d-flex flex-column herobawah align-items-center justify-content-center text-center">
       <h1 class="display-4 text-white text-shadow fw-bold">Konstruksi Bukan Sekadar<br>Bangunan,<br>Tapi Fondasi Masa Depan.</h1>
@@ -289,7 +269,7 @@
 <footer class="py-5 bg-dark text-white">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6 mt-3">
+      <div data-aos="zoom-in" class="col-12 col-md-6 mt-3">
         <h1>CAF</h1>
         <p class="fw-light">Jl. Karangkambang no1, Cilacap, Jawa Tengah, 53263</p>
         <div class="d-flex">
@@ -298,7 +278,7 @@
           <i class="bi bi-twitter px-2"></i>
         </div>
       </div>
-      <div class="col-12 col-md-2 d-flex flex-column mt-3">
+      <div data-aos="zoom-in" class="col-12 col-md-2 d-flex flex-column mt-3">
         <h3>Menu</h3>
         <a href="#home" class="link">Home</a>
         <a href="#layanan" class="link">Layanan</a>
@@ -306,7 +286,7 @@
         <a href="#project" class="link">Work</a>
         <a href="#contact" class="link">Contact</a>
       </div>
-      <div class="col-12 col-md-2 d-flex flex-column mt-3">
+      <div data-aos="zoom-in" class="col-12 col-md-2 d-flex flex-column mt-3">
         <h3>Projects</h3>
         <a href="#project" class="link">Atlas Museum</a>
         <a href="#project" class="link">Kenanga Office</a>
@@ -314,7 +294,7 @@
         <a href="#project" class="link">Glass Hotel</a>
         <a href="#project" class="link">Al Ahli Mosque</a>
       </div>
-      <div class="col-12 col-md-2 d-flex flex-column mt-3">
+      <div data-aos="zoom-in" class="col-12 col-md-2 d-flex flex-column mt-3">
         <h3>Company</h3>
         <a href="#home" class="link">Partners</a>
         <a href="#home" class="link">Carreer</a>
@@ -323,6 +303,22 @@
   </div>
 </footer>
 
-
+<script>
+  AOS.init()
+  function lightbox() {
+    return {
+      isOpen: false,
+      imageSrc: '',
+      open(src) {
+        this.imageSrc = src
+        this.isOpen = true
+      },
+      close() {
+        this.imageSrc = ''
+        this.isOpen = false
+      }
+    }
+  }
+</script>
 </body>
 </html>
