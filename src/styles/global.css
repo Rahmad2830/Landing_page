@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .layanan {
   transition: transform 0.3s ease;
+}
+.overlay {
+  background-color: rgba(0,0,0,0.7);
 }
 .layanan:hover {
   transform: scale(1.05);

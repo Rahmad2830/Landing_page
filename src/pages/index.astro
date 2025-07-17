@@ -73,17 +73,26 @@ const project = data.filter(i => i.frontmatter.title === "project")
 	    const { title, items } = section.frontmatter
 	    return (
 	  <Section style="py-5 text-white bg-dark" id="project">
+	    <div x-data="lightbox">
 	    <h1 class="h6">Proyek Kami</h1>
 	    <h1 class="display-3 fw-bold">Proyek Terbaru Kami</h1>
 	    <div class="row mt-5 text-center">
 	      {items.map((item) => (
 	      <div class="col-md-4 p-3">
-	        <img src={item.gambar} alt={item.title} class="img-fluid" loading="lazy">
+	        <img src={item.gambar} alt={item.title} class="img-fluid gambar" loading="lazy" @click="open($el.getAttribute('src'))">
 	        <h2 class="mt-3">{item.title}</h2>
 	        <p class="lead mt-3">{item.description}</p>
 	        <p x-text="text"></p>
 	      </div>
 	      ))}
+	    </div>
+	    <template x-if="isOpen">
+	    <div class="position-relative">
+        <div class="w-100 h-100 top-0 start-0 position-fixed overlay d-flex overlay justify-content-center align-items-center" style="z-index: 1050" @click.self="close()">
+          <img :src="imgSrc" alt="Gambar Project" class="img-fluid" style="max-height: 90vh; max-width: 100%; object-fit: contain">
+        </div>
+      </div>
+      </template>
 	    </div>
 	   </Section>
 	  )})}
