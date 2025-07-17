@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import Hero from '../components/Hero.astro'
+import Section from '../components/Section.astro'
+import Slider from '../components/Slider.astro'
+import Cards from '../components/Cards.astro'
+import Lightbox from '../components/Lightbox.astro'
+const data = Object.values(import.meta.glob('../content/*.md', { eager: true }))
+const service = data.filter(i => i.frontmatter.title === "services")
+const project = data.filter(i => i.frontmatter.title === "project")
+---
+
+<Layout>
+	<Navbar />
+	<main>
+	  <Hero id="home" />
+	  <!-- layanan kami -->
+	  {service.map((section) => {
+	  const { title, items } = section.frontmatter
+	  return (
+	  <Section style="py-5" id="layanan">
+	    <h1 class="h6">Layanan Kami</h1>
+	    <h1 class="display-3 fw-bold">Layanan yang komprehensif</h1>
+	    <div class="row mt-5">
+	    {items.map((item) => (
+	      <div class="col-lg-4 mt-3 mt-lg-0">
+	        <Cards title={item.title} description={item.description} style={item.style}>
+	          <i class={item.icon}></i>
+	          <div class="d-flex mt-3 layanan" slot="button">
+	            <a href="" class="h4 text-decoration-none pe-2">Learn more <i class="bi bi-box-arrow-in-up-right"></i></a>
+	          </div>
+	        </Cards>
+	      </div>
+	      ))}
+	    </div>
+	  </Section>
+	  )})}
+	  <!-- about -->
+	  <Section style="py-5" id="about">
+	    <h1 class="h6">Tentang Kami</h1>
+	    <h1 class="display-3 fw-bold">Infrastruktur pembangunan berkelanjutan dan inovatif</h1>
+	    <div class="row mt-5">
+	      <div class="col-lg-6">
+	        <img src="/img/about.webp" alt="buldozer sedang membawa tanah" class="img-fluid" loading="lazy">
+	      </div>
+	      <div class="col-lg-6 mt-3 mt-lg-0">
+	        <p class="lead">Di CAF, kami percaya bahwa setiap proyek konstruksi bukan sekadar membangun struktur fisik, tetapi juga membangun hubungan yang kuat, kepercayaan yang tak tergoyahkan, dan warisan untuk masa depan. Kami tidak hanya sekadar mendirikan gedung kami mewujudkan visi Anda menjadi kenyataan dengan integritas, keahlian, dan komitmen yang tak tertandingi.</p>
+	        <p class="lead">Dengan pengalaman bertahun-tahun di dunia konstruksi, CAF telah menjadi sinonim dengan kualitas dan keandalan. Keahlian kami mencakup spektrum luas proyek, mulai dari hunian yang nyaman, gedung komersial yang dinamis, hingga infrastruktur yang kompleks. Setiap batu bata yang kami pasang, setiap fondasi yang kami tuang, dan setiap detail yang kami kerjakan adalah cerminan dari dedikasi kami untuk mencapai standar tertinggi. </p>
+	      </div>
+	    </div>
+	    <div class="row text-center mt-5 gap-4 gap-md-0">
+	      <div class="col-md-3">
+	        <h1 class="display-3 fw-bold">400+</h1>
+	        <p class="lead">Proyek Sukses</p>
+	      </div>
+	      <div class="col-md-3">
+	        <h1 class="display-3 fw-bold">11+</h1>
+	        <p class="lead">Tahun Pengalaman</p>
+	      </div>
+	      <div class="col-md-3">
+	        <h1 class="display-3 fw-bold">90+</h1>
+	        <p class="lead">Klien Senang</p>
+	      </div>
+	      <div class="col-md-3">
+	        <h1 class="display-3 fw-bold">100%</h1>
+	        <p class="lead">Kepuasan Klien</p>
+	      </div>
+	    </div>
+	  </Section>
+	  <!-- proyek kami -->
+	  {project.map((section) => {
+	    const { title, items } = section.frontmatter
+	    return (
+	  <Section style="py-5 text-white bg-dark" id="project">
+	    <h1 class="h6">Proyek Kami</h1>
+	    <h1 class="display-3 fw-bold">Proyek Terbaru Kami</h1>
+	    <div class="row mt-5 text-center">
+	      {items.map((item) => (
+	      <div class="col-md-4 p-3">
+	        <img src={item.gambar} alt={item.title} class="img-fluid" loading="lazy">
+	        <h2 class="mt-3">{item.title}</h2>
+	        <p class="lead mt-3">{item.description}</p>
+	        <p x-text="text"></p>
+	      </div>
+	      ))}
+	    </div>
+	   </Section>
+	  )})}
+	  <!-- testimoni -->
+	  <Section style="py-5" id="testimoni">
+	    <h1 class="h6">Testimonial</h1>
+	    <h1 class="display-3 fw-bold">Apa yang klien kami katakan</h1>
+	    <div class="row mt-5">
+	      <div class="col-lg-4 align-self-center">
+	      <img src="/img/testimoni.webp" alt="testimonial" class="img-fluid" loading="lazy">
+	      </div>
+	      <div class="col-lg-8 align-self-center">
+	      <Slider />
+	      </div>
+	    </div>
+	  </Section>
+	  <!-- CTA -->
+	  <Section style="py-5" id="CTA">
+	    <div class="herobawah d-flex flex-column align-items-center justify-content-center text-center">
+	     <h1 class="display-4 text-white text-shadow fw-bold text-shadow">Konstruksi Bukan Sekadar<br>Bangunan,<br>Tapi Fondasi Masa Depan.</h1>
+        <div class="mt-3">
+        <a href="#CTA" class="btn btn-warning btn-lg">Get Started</a>
+        </div>
+	    </div>
+	  </Section>
+	  </main>
+	  <!-- footer -->
+	  <footer id="footer">
+	  <Section style="py-5 bg-dark">
+	    <div class="row">
+	      <div class="col-md-6 text-white">
+  	       <h1>CAF</h1>
+          <p class="fw-light">Jl. Karangkambang no1, Cilacap, Jawa Tengah, 53263</p>
+          <div class="d-flex">
+            <i class="bi bi-facebook px-2"></i>
+            <i class="bi bi-instagram px-2"></i>
+            <i class="bi bi-twitter px-2"></i>
+	        </div>
+	      </div>
+	      <div class="col-md-2 text-white">
+	        <h3>Menu</h3>
+  	      <p><a href="#home" class="link">Home</a></p>
+          <p><a href="#layanan" class="link">Layanan</a></p>
+          <p><a href="#about" class="link">About</a></p>
+          <p><a href="#project" class="link">Work</a></p>
+          <p><a href="#contact" class="link">Contact</a></p>
+	      </div>
+	      <div class="col-md-2 text-white">
+  	      <h3>Projects</h3>
+          <p><a href="#project" class="link">Atlas Museum</a></p>
+          <p><a href="#project" class="link">Kenanga Office</a></p>
+          <p><a href="#project" class="link">Rubik Building</a></p>
+          <p><a href="#project" class="link">Glass Hotel</a></p>
+          <p><a href="#project" class="link">Al Ahli Mosque</a></p>
+	      </div>
+	      <div class="col-md-2 te text-white">
+  	       <h3>Company</h3>
+          <p><a href="#home" class="link">Partners</a></p>
+          <p><a href="#home" class="link">Carreer</a></p>
+	      </div>
+	     </div>
+	  </Section>
+	  </footer>
+</Layout>

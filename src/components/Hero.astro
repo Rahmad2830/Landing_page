@@ -1,0 +1,36 @@
+---
+const { id } = Astro.props
+---
+
+<section class="hero bg-dark pt-5" id={id}>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 align-self-center">
+        <h1 class="text-hero display-1 fw-bold text-white">Building Dreams,<br><span class="text-warning">Into Reality</span></h1>
+        <p class="lead text-white">Membangun mimpi anda dengan pasti!</p>
+        <a href="#CTA" class="btn btn-warning btn-lg">Get Started</a>
+      </div>
+      <div class="col-md-4">
+        <img src="/img/worker.webp" alt="pekerja konstruksi" class="img-fluid gambar-hero" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 992px) {
+    .text-hero {
+      font-size: 38px;
+    }
+  }
+  @media (max-width: 768px) {
+    .hero {
+      height: 100vh;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .gambar-hero {
+      width: 100vw;
+    }
+  }
+</style>

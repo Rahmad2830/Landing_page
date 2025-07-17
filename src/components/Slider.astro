@@ -1,0 +1,46 @@
+---
+import Cards from '../components/Cards.astro'
+const data = Object.values(import.meta.glob('../content/*.md', { eager: true }))
+const testimoni = data.filter(i => i.frontmatter.title === "testimoni")
+---
+{testimoni.map((section) => {
+const { title, items } = section.frontmatter
+
+return (
+<div x-init="new Glide('.glide', {
+    type: 'carousel',
+    perView: 2,
+    breakpoints: {
+      992: {
+        perView: 1,
+        autoplay:3000
+        }
+      }
+    }
+  ).mount()">
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        {items.map((item) => (
+        <li class="glide__slide p-3 text-center">
+          <Cards style="card p-3 testi" title={item.pengguna} description={item.comment}>
+          </Cards>
+        </li>
+        ))}
+      </ul>
+      
+      <div class="glide__arrows mt-3 text-center" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left bg-warning me-3" data-glide-dir="<"><i class="bi bi-arrow-left fs-3"></i></button>
+      <button class="glide__arrow glide__arrow--right bg-warning" data-glide-dir=">"><i class="bi bi-arrow-right fs-3"></i></button>
+    </div>
+    </div>
+  </div>
+</div>
+)})}
+
+<style>
+  button {
+    border: none;
+    border-radius: 5px;
+  }
+</style>

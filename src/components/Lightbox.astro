@@ -1,0 +1,15 @@
+---
+const { src } = Astro.props
+---
+
+<section class="position-relative">
+  <div class="w-100 h-100 top-0 start-0 position-fixed overlay d-flex overlay justify-content-center align-items-center" style="z-index: 1050">
+    <img src={src}>
+  </div>
+</section>
+
+<style>
+  .overlay {
+    background-color: rgba(0,0,0,0.7);
+  }
+</style>

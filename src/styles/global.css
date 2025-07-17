@@ -1,0 +1,30 @@
+.layanan {
+  transition: transform 0.3s ease;
+}
+.layanan:hover {
+  transform: scale(1.05);
+}
+.herobawah {
+  background-image: url('/img/herobawah.webp');
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text-shadow {
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.testi:hover {
+  background-color: #ffc107;
+}
+@media (max-width: 768px) {
+  .herobawah {
+    height: 640px;
+  }
+}

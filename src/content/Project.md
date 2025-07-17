@@ -1,0 +1,22 @@
+---
+title: "project"
+items:
+  - title: "Atlas Museum"
+    description: "Consectetur laboris fugiat duis aliqua culpa officia aute veniam pariatur officia. Irure aliquip excepteur fugiat ex aliquip ea minim."
+    gambar: "/img/project.webp"
+  - title: "Kenanga Office"
+    description: "Consectetur laboris fugiat duis aliqua culpa officia aute veniam pariatur officia. Irure aliquip excepteur fugiat ex aliquip ea minim."
+    gambar: "/img/project1.webp"
+  - title: "Rubik Building"
+    description: "Consectetur laboris fugiat duis aliqua culpa officia aute veniam pariatur officia. Irure aliquip excepteur fugiat ex aliquip ea minim."
+    gambar: "/img/project2.webp"
+  - title: "Glass Hotel"
+    description: "Consectetur laboris fugiat duis aliqua culpa officia aute veniam pariatur officia. Irure aliquip excepteur fugiat ex aliquip ea minim."
+    gambar: "/img/project3.webp"
+  - title: "Al Ahli Mosque"
+    description: "Consectetur laboris fugiat duis aliqua culpa officia aute veniam pariatur officia. Irure aliquip excepteur fugiat ex aliquip ea minim."
+    gambar: "/img/project4.webp"
+  - title: "Axel Towers"
+    description: "Consectetur laboris fugiat duis aliqua culpa officia aute veniam pariatur officia. Irure aliquip excepteur fugiat ex aliquip ea minim."
+    gambar: "/img/project5.webp"
+---
