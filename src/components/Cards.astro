@@ -6,9 +6,8 @@ const { style="card p-3", title, description } = Astro.props
   <div class="card-body">
     <slot />
     <h2 class="h3" class="card-title">{title}</h2>
-    <p class="lead">{description}</p>
-    <slot name="button">
-    </slot>
+    <p class="fs-6">{description}</p>
+    <slot name="button" />
   </div>
 </div>
 

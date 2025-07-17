@@ -23,7 +23,11 @@ return (
       <ul class="glide__slides">
         {items.map((item) => (
         <li class="glide__slide p-3 text-center">
-          <Cards style="card p-3 testi" title={item.pengguna} description={item.comment}>
+          <Cards style="card p-3 testi" title='' description=''>
+            <figure slot="button">
+              <blockquote class="blockquote">"{item.comment}"</blockquote>
+              <strong class="blockquote-footer fs-5">{item.pengguna}</strong>
+            </figure>
           </Cards>
         </li>
         ))}
